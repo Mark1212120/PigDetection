@@ -1,0 +1,56 @@
+{
+  "fasterrcnn_r50_fpn": {
+    "path": "D:\\Projects\\Pig_Detection_test\\models\\pretrained\\fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+    "source": "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+    "resolved_url": "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+    "bytes": 167502836,
+    "sha256": "258fb6c638b15964ddcdd1ae0748c5eef1be9e732750120cc857feed3faac384",
+    "purpose": "COCO pretrained initialization; not pig-finetuned",
+    "downloaded_utc": "2026-10-21T06:22:22Z"
+  },
+  "retinanet_r50_fpn": {
+    "path": "D:\\Projects\\Pig_Detection_test\\models\\pretrained\\retinanet_resnet50_fpn_coco-eeacb38b.pth",
+    "source": "https://download.pytorch.org/models/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+    "resolved_url": "https://download.pytorch.org/models/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+    "bytes": 136595076,
+    "sha256": "eeacb38b7cec8cf93c57867e05eaab621047f19b0d2ec5accaa405f690da15b7",
+    "purpose": "COCO pretrained initialization; not pig-finetuned",
+    "downloaded_utc": "2026-10-21T06:22:56Z"
+  },
+  "fcos_r50_fpn": {
+    "path": "D:\\Projects\\Pig_Detection_test\\models\\pretrained\\fcos_resnet50_fpn_coco-99b0c9b7.pth",
+    "source": "https://download.pytorch.org/models/fcos_resnet50_fpn_coco-99b0c9b7.pth",
+    "resolved_url": "https://download.pytorch.org/models/fcos_resnet50_fpn_coco-99b0c9b7.pth",
+    "bytes": 129612099,
+    "sha256": "99b0c9b7cfb1527d782db86b91d207f00547c792fb4103fc612b651d0a07b9e7",
+    "purpose": "COCO pretrained initialization; not pig-finetuned",
+    "downloaded_utc": "2026-10-21T06:23:31Z"
+  },
+  "yolox_s": {
+    "path": "D:\\Projects\\Pig_Detection_test\\models\\pretrained\\yolox_s.pth",
+    "source": "https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.pth",
+    "resolved_url": "https://release-assets.githubusercontent.com/github-production-release-asset/386811486/42c4cb47-f94e-475b-a3a2-57f31f26fa5d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-21T07%3A15%3A28Z&rscd=attachment%3B+filename%3Dyolox_s.pth&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-21T06%3A15%3A00Z&ske=2026-10-21T07%3A15%3A28Z&sks=b&skv=2018-11-09&sig=DhYOgQ9dhdBgLcfZdHX7Bj5Mkqvump%2FgHn2%2FJuoQMvs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MjU2NTYxNSwibmJmIjoxNzkyNTYzODE1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gcedMTeL31UN_UhhxAe2IjIWg606hFc8nnYja10A5FM&response-content-disposition=attachment%3B%20filename%3Dyolox_s.pth&response-content-type=application%2Foctet-stream",
+    "bytes": 72089125,
+    "sha256": "f55ded7181e1b0c13285c56e7790b8f0e8f8db590fe4edb37f0b7f345c913a30",
+    "purpose": "COCO pretrained initialization; not pig-finetuned",
+    "downloaded_utc": "2026-10-21T06:23:56Z"
+  },
+  "yolov8s": {
+    "path": "D:\\Projects\\Pig_Detection_test\\models\\pretrained\\yolov8s.pt",
+    "source": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8s.pt",
+    "resolved_url": "https://release-assets.githubusercontent.com/github-production-release-asset/521807533/c50be4f3-d385-48d2-91a6-c6e1267144a1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-21T07%3A23%3A20Z&rscd=attachment%3B+filename%3Dyolov8s.pt&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-21T06%3A23%3A08Z&ske=2026-10-21T07%3A23%3A20Z&sks=b&skv=2018-11-09&sig=tkgdPvVPzJ6q%2FwrpqB7BzbXT1a4Lzp7dE%2BwTqQaDNGA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MjU2NTYzOSwibmJmIjoxNzkyNTYzODM5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._Wgby2N9bKmgdtJQzOoEXc-BZS-lW9RzIu_77mmQXaE&response-content-disposition=attachment%3B%20filename%3Dyolov8s.pt&response-content-type=application%2Foctet-stream",
+    "bytes": 22588772,
+    "sha256": "1f47a78bf100391c2a140b7ac73a1caae18c32779be7d310658112f7ac9aa78a",
+    "purpose": "COCO pretrained initialization; not pig-finetuned",
+    "downloaded_utc": "2026-10-21T06:24:09Z"
+  },
+  "rtdetr_l": {
+    "path": "D:\\Projects\\Pig_Detection_test\\models\\pretrained\\rtdetr-l.pt",
+    "source": "https://github.com/ultralytics/assets/releases/download/v8.4.0/rtdetr-l.pt",
+    "resolved_url": "https://release-assets.githubusercontent.com/github-production-release-asset/521807533/08841054-42d2-46be-96ae-298053c07f19?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-21T07%3A17%3A51Z&rscd=attachment%3B+filename%3Drtdetr-l.pt&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-21T06%3A17%3A29Z&ske=2026-10-21T07%3A17%3A51Z&sks=b&skv=2018-11-09&sig=fUdtpb7Mwa4Xvsqpd61PZWHxeL%2BZ%2BYlwlh10Lo98foY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MjU2NTY1MSwibmJmIjoxNzkyNTYzODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mcNA-oiMFPrQO-_OPIalAZEqavDKytFReCwDst6nj9A&response-content-disposition=attachment%3B%20filename%3Drtdetr-l.pt&response-content-type=application%2Foctet-stream",
+    "bytes": 66511432,
+    "sha256": "6de60b10d4bc566f00cda0f5b4d64afe4b66d48dc9695d2171effb7859d8e73f",
+    "purpose": "COCO pretrained initialization; not pig-finetuned",
+    "downloaded_utc": "2026-10-21T06:24:30Z"
+  }
+}

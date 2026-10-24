@@ -1,0 +1,52 @@
+{
+  "method": "yolox_s",
+  "split": "test",
+  "metrics": {
+    "AP": 0.7416415537709383,
+    "AP50": 0.9834426897840831,
+    "AP75": 0.950065036395884,
+    "AP_small": -1.0,
+    "AP_medium": 0.3614501978148126,
+    "AP_large": 0.7423923510133053,
+    "AR1": 0.08370830100853374,
+    "AR10": 0.7969743987587277,
+    "AR100": 0.799301784328937,
+    "AR_small": -1.0,
+    "AR_medium": 0.75,
+    "AR_large": 0.7994552529182879,
+    "units": "fractions 0..1; -1 means undefined; COCO maxDets=100"
+  },
+  "timing": {
+    "measured_images": 132,
+    "excluded_warmup": 1,
+    "mean_ms": 4.821078858874513,
+    "scope": "batch=1 adapter preprocessing+model+postprocessing; excludes disk decode; not standardized paper FPS"
+  },
+  "smoke_only": false,
+  "protocol": "exploratory",
+  "protocol_note": "EXPLORATORY same-scene filename blocks with exclusion gaps; filenames are NOT verified time/source groups; semantic leakage and video overlap remain unproven.",
+  "environment": {
+    "python": "/home/DP/pigdet_20261021/env/bin/python",
+    "utc": "2026-10-21T11:49:09.219786+00:00",
+    "versions": {
+      "torch": "2.5.1+cu121",
+      "torchvision": "0.20.1+cu121",
+      "ultralytics": "8.4.183",
+      "numpy": "1.26.4"
+    },
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "weights": "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581/best.pt",
+  "weights_sha256": "8374ad092804672d3c5d6e8a1bfc887af5f33953e1ba355e7adef1b0c4216b0e",
+  "split_sha256": "39846e286dd66b75911e479c94cac8f6e56b3802aad0fe80ea81f9c495319e53",
+  "arguments": {
+    "method": "yolox_s",
+    "weights": "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581/best.pt",
+    "dataset": "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+    "split": "test",
+    "output": "/home/DP/pigdet_20261021/project/experiments/results/yolox_s_seed42_20261021_164039_171581_test",
+    "device": "cuda:0",
+    "imgsz": 640,
+    "limit": 0
+  }
+}

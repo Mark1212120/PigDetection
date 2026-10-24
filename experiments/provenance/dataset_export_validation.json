@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "dataset": "D:\\Projects\\Pig_Detection_test\\data\\processed\\exploratory",
+  "split_sha256": "bbedb133a9313b4f7e8aefd9c3ab6c8224c87b11d43f881b8bfbe6d220ff7528",
+  "images": 935,
+  "boxes": 8954,
+  "excluded": 80,
+  "checks": [
+    "disjoint IDs and exact image hashes",
+    "all VOC/COCO/YOLO boxes equivalent",
+    "raw XML hashes unchanged"
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "task": "six-detector server training and evaluation",
+  "status": "completed",
+  "run_id": "20261021_164039_171581",
+  "python": "/home/DP/pigdet_20261021/env/bin/python",
+  "root": "/home/DP/pigdet_20261021/project",
+  "stages": [
+    {
+      "label": "校验数据",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/tools/validate_export.py",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "校验/补下载初始化权重",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/tools/download_weights.py"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "训练 yolov8s",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/train.py",
+        "--config",
+        "/home/DP/pigdet_20261021/project/configs/yolov8s.yaml",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--name",
+        "yolov8s_seed42_20261021_164039_171581"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "训练 yolox_s",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/train.py",
+        "--config",
+        "/home/DP/pigdet_20261021/project/configs/yolox_s.yaml",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--name",
+        "yolox_s_seed42_20261021_164039_171581"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "训练 fasterrcnn_r50_fpn",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/train.py",
+        "--config",
+        "/home/DP/pigdet_20261021/project/configs/fasterrcnn_r50_fpn.yaml",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--name",
+        "fasterrcnn_r50_fpn_seed42_20261021_164039_171581"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "训练 retinanet_r50_fpn",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/train.py",
+        "--config",
+        "/home/DP/pigdet_20261021/project/configs/retinanet_r50_fpn.yaml",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--name",
+        "retinanet_r50_fpn_seed42_20261021_164039_171581"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "训练 fcos_r50_fpn",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/train.py",
+        "--config",
+        "/home/DP/pigdet_20261021/project/configs/fcos_r50_fpn.yaml",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--name",
+        "fcos_r50_fpn_seed42_20261021_164039_171581"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "训练 rtdetr_l",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/train.py",
+        "--config",
+        "/home/DP/pigdet_20261021/project/configs/rtdetr_l.yaml",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--name",
+        "rtdetr_l_seed42_20261021_164039_171581"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "测试 yolov8s",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/export_detection.py",
+        "--method",
+        "yolov8s",
+        "--weights",
+        "/home/DP/pigdet_20261021/project/experiments/runs/yolov8s_seed42_20261021_164039_171581/engine/weights/best_coco.pt",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--imgsz",
+        "640",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/results/yolov8s_seed42_20261021_164039_171581_test"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "测试 yolox_s",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/export_detection.py",
+        "--method",
+        "yolox_s",
+        "--weights",
+        "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581/best.pt",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--imgsz",
+        "640",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/results/yolox_s_seed42_20261021_164039_171581_test"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "测试 fasterrcnn_r50_fpn",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/export_detection.py",
+        "--method",
+        "fasterrcnn_r50_fpn",
+        "--weights",
+        "/home/DP/pigdet_20261021/project/experiments/runs/fasterrcnn_r50_fpn_seed42_20261021_164039_171581/best.pt",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--imgsz",
+        "640",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/results/fasterrcnn_r50_fpn_seed42_20261021_164039_171581_test"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "测试 retinanet_r50_fpn",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/export_detection.py",
+        "--method",
+        "retinanet_r50_fpn",
+        "--weights",
+        "/home/DP/pigdet_20261021/project/experiments/runs/retinanet_r50_fpn_seed42_20261021_164039_171581/best.pt",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--imgsz",
+        "640",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/results/retinanet_r50_fpn_seed42_20261021_164039_171581_test"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "测试 fcos_r50_fpn",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/export_detection.py",
+        "--method",
+        "fcos_r50_fpn",
+        "--weights",
+        "/home/DP/pigdet_20261021/project/experiments/runs/fcos_r50_fpn_seed42_20261021_164039_171581/best.pt",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--imgsz",
+        "640",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/results/fcos_r50_fpn_seed42_20261021_164039_171581_test"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "测试 rtdetr_l",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/scripts/export_detection.py",
+        "--method",
+        "rtdetr_l",
+        "--weights",
+        "/home/DP/pigdet_20261021/project/experiments/runs/rtdetr_l_seed42_20261021_164039_171581/engine/weights/best_coco.pt",
+        "--dataset",
+        "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+        "--imgsz",
+        "640",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/results/rtdetr_l_seed42_20261021_164039_171581_test"
+      ],
+      "status": "completed",
+      "returncode": 0
+    },
+    {
+      "label": "生成检测对比表",
+      "command": [
+        "/home/DP/pigdet_20261021/env/bin/python",
+        "-u",
+        "/home/DP/pigdet_20261021/project/tools/summarize_results.py",
+        "--results",
+        "/home/DP/pigdet_20261021/project/experiments/results/yolov8s_seed42_20261021_164039_171581_test/metrics.json",
+        "/home/DP/pigdet_20261021/project/experiments/results/yolox_s_seed42_20261021_164039_171581_test/metrics.json",
+        "/home/DP/pigdet_20261021/project/experiments/results/fasterrcnn_r50_fpn_seed42_20261021_164039_171581_test/metrics.json",
+        "/home/DP/pigdet_20261021/project/experiments/results/retinanet_r50_fpn_seed42_20261021_164039_171581_test/metrics.json",
+        "/home/DP/pigdet_20261021/project/experiments/results/fcos_r50_fpn_seed42_20261021_164039_171581_test/metrics.json",
+        "/home/DP/pigdet_20261021/project/experiments/results/rtdetr_l_seed42_20261021_164039_171581_test/metrics.json",
+        "--output",
+        "/home/DP/pigdet_20261021/project/experiments/pipelines/20261021_164039_171581/detection.csv"
+      ],
+      "status": "completed",
+      "returncode": 0
+    }
+  ],
+  "restart_policy": "new run; no automatic checkpoint resume",
+  "outputs": {
+    "runs": {
+      "yolov8s": {
+        "name": "yolov8s_seed42_20261021_164039_171581",
+        "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/yolov8s_seed42_20261021_164039_171581/engine/weights/best_coco.pt",
+        "manifest": "/home/DP/pigdet_20261021/project/experiments/runs/yolov8s_seed42_20261021_164039_171581/run_manifest.json",
+        "config": {
+          "method": "yolov8s",
+          "pretrained": "models/pretrained/yolov8s.pt",
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 32,
+          "effective_batch": 32,
+          "lr": 0.0001,
+          "weight_decay": 0.0005,
+          "seed": 42,
+          "workers": 4
+        },
+        "metrics": "/home/DP/pigdet_20261021/project/experiments/results/yolov8s_seed42_20261021_164039_171581_test/metrics.json"
+      },
+      "yolox_s": {
+        "name": "yolox_s_seed42_20261021_164039_171581",
+        "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581/best.pt",
+        "manifest": "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581/run_manifest.json",
+        "config": {
+          "method": "yolox_s",
+          "pretrained": "models/pretrained/yolox_s.pth",
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 16,
+          "effective_batch": 32,
+          "lr": 0.0001,
+          "weight_decay": 0.0005,
+          "seed": 42,
+          "workers": 4
+        },
+        "metrics": "/home/DP/pigdet_20261021/project/experiments/results/yolox_s_seed42_20261021_164039_171581_test/metrics.json"
+      },
+      "fasterrcnn_r50_fpn": {
+        "name": "fasterrcnn_r50_fpn_seed42_20261021_164039_171581",
+        "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/fasterrcnn_r50_fpn_seed42_20261021_164039_171581/best.pt",
+        "manifest": "/home/DP/pigdet_20261021/project/experiments/runs/fasterrcnn_r50_fpn_seed42_20261021_164039_171581/run_manifest.json",
+        "config": {
+          "method": "fasterrcnn_r50_fpn",
+          "pretrained": "models/pretrained/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 8,
+          "effective_batch": 32,
+          "lr": 0.0001,
+          "weight_decay": 0.0005,
+          "seed": 42,
+          "workers": 4
+        },
+        "metrics": "/home/DP/pigdet_20261021/project/experiments/results/fasterrcnn_r50_fpn_seed42_20261021_164039_171581_test/metrics.json"
+      },
+      "retinanet_r50_fpn": {
+        "name": "retinanet_r50_fpn_seed42_20261021_164039_171581",
+        "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/retinanet_r50_fpn_seed42_20261021_164039_171581/best.pt",
+        "manifest": "/home/DP/pigdet_20261021/project/experiments/runs/retinanet_r50_fpn_seed42_20261021_164039_171581/run_manifest.json",
+        "config": {
+          "method": "retinanet_r50_fpn",
+          "pretrained": "models/pretrained/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 32,
+          "effective_batch": 32,
+          "lr": 0.0001,
+          "weight_decay": 0.0005,
+          "seed": 42,
+          "workers": 4
+        },
+        "metrics": "/home/DP/pigdet_20261021/project/experiments/results/retinanet_r50_fpn_seed42_20261021_164039_171581_test/metrics.json"
+      },
+      "fcos_r50_fpn": {
+        "name": "fcos_r50_fpn_seed42_20261021_164039_171581",
+        "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/fcos_r50_fpn_seed42_20261021_164039_171581/best.pt",
+        "manifest": "/home/DP/pigdet_20261021/project/experiments/runs/fcos_r50_fpn_seed42_20261021_164039_171581/run_manifest.json",
+        "config": {
+          "method": "fcos_r50_fpn",
+          "pretrained": "models/pretrained/fcos_resnet50_fpn_coco-99b0c9b7.pth",
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 16,
+          "effective_batch": 32,
+          "lr": 0.0001,
+          "weight_decay": 0.0005,
+          "seed": 42,
+          "workers": 4
+        },
+        "metrics": "/home/DP/pigdet_20261021/project/experiments/results/fcos_r50_fpn_seed42_20261021_164039_171581_test/metrics.json"
+      },
+      "rtdetr_l": {
+        "name": "rtdetr_l_seed42_20261021_164039_171581",
+        "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/rtdetr_l_seed42_20261021_164039_171581/engine/weights/best_coco.pt",
+        "manifest": "/home/DP/pigdet_20261021/project/experiments/runs/rtdetr_l_seed42_20261021_164039_171581/run_manifest.json",
+        "config": {
+          "method": "rtdetr_l",
+          "pretrained": "models/pretrained/rtdetr-l.pt",
+          "epochs": 100,
+          "imgsz": 640,
+          "batch": 16,
+          "effective_batch": 32,
+          "lr": 0.0001,
+          "weight_decay": 0.0005,
+          "seed": 42,
+          "workers": 4
+        },
+        "metrics": "/home/DP/pigdet_20261021/project/experiments/results/rtdetr_l_seed42_20261021_164039_171581_test/metrics.json"
+      }
+    },
+    "detection_table": "/home/DP/pigdet_20261021/project/experiments/pipelines/20261021_164039_171581/detection.csv"
+  }
+}

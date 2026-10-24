@@ -1,0 +1,52 @@
+{
+  "raw_root": "D:\\Projects\\Pig_Detection_test\\data\\raw\\pig_detection",
+  "image_folder": "D:\\Projects\\Pig_Detection_test\\data\\raw\\pig_detection\\data",
+  "annotation_folder": "D:\\Projects\\Pig_Detection_test\\data\\raw\\pig_detection\\label",
+  "image_count": 1015,
+  "xml_count": 1015,
+  "paired_count": 1015,
+  "paired_id_min": 1,
+  "paired_id_max": 1016,
+  "unlabeled_count": 0,
+  "unlabeled": [],
+  "orphan_xmls": [],
+  "image_dimensions": {
+    "1280x720": 1015
+  },
+  "class_counts": {
+    "pig": 9735
+  },
+  "object_count": 9735,
+  "min_objects_per_labeled_image": 6,
+  "max_objects_per_labeled_image": 12,
+  "empty_xml_count": 0,
+  "flags": {
+    "difficult=0": 9735,
+    "truncated=0": 8578,
+    "truncated=1": 1157
+  },
+  "historical_xml_path_examples": [
+    "F:\\猪-目标检测标注\\a\\1.jpg",
+    "F:\\猪-目标检测标注\\a\\2.jpg",
+    "C:\\Users\\18523\\Desktop\\新建文件夹\\a\\3.jpg"
+  ],
+  "historical_xml_path_count": 1015,
+  "errors": [],
+  "exact_duplicate_image_groups": [],
+  "image_check": "All JPEG headers opened and PIL verify passed; full pixel decode only for contact-sheet samples.",
+  "unique_image_hash_count": 1015,
+  "duplicate_group_count": 0,
+  "unlabeled_exact_copy_of_annotated_count": 0,
+  "annotated_duplicate_group_count": 0,
+  "unique_unlabeled_images_not_matching_annotated": 0,
+  "numeric_jpeg_range": "1..1016 except 558.jpg",
+  "paired_xml_range": "1..1016 except 558.xml",
+  "cleaning_manifest": "D:\\Projects\\Pig_Detection_test\\data\\audit\\cleaning_manifest_v1.json",
+  "previous_snapshot": "D:\\Projects\\Pig_Detection_test\\data\\audit\\before_cleaning_v1\\dataset_structure_audit.json",
+  "state": "after_unlabeled_cleaning_and_xml_path_repair_v1",
+  "xml_path_repair_manifest": "D:\\Projects\\Pig_Detection_test\\data\\audit\\xml_path_repair_manifest_v1.json",
+  "current_xml_paths_valid": 1015,
+  "current_xml_folder_counts": {
+    "data": 1015
+  }
+}

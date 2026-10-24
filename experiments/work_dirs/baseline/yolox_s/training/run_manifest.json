@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "environment": {
+    "python": "/home/DP/pigdet_20261021/env/bin/python",
+    "utc": "2026-10-21T08:53:39.401874+00:00",
+    "versions": {
+      "torch": "2.5.1+cu121",
+      "torchvision": "0.20.1+cu121",
+      "ultralytics": "8.4.183",
+      "numpy": "1.26.4"
+    },
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "source_sha256": {
+    "datasets/__init__.py": "f212f9d2ca83cb2ccb01545e7347204132dd553a41dc1a9e25aa79d51e043aac",
+    "datasets/pig.py": "b59f2a4f857cf50c725ce6fe0af78ff9c97b149efaa44ea642a97d09262dc566",
+    "models/detectors.py": "1b471bfe4838a93ee1eccacee48ec5a5af4ee2f6e768b206fc64202dee805398",
+    "models/__init__.py": "f212f9d2ca83cb2ccb01545e7347204132dd553a41dc1a9e25aa79d51e043aac",
+    "scripts/export_detection.py": "62a0d911067f035f0e5a8fb53d06f9c4719b18c62e9bff0ea6038814e0c7697e",
+    "scripts/train.py": "47f4806d61e858d9a6b7d7178ad7f9d93f7ec498d1e0d1b40dddad278a07e1f4",
+    "scripts/__init__.py": "f212f9d2ca83cb2ccb01545e7347204132dd553a41dc1a9e25aa79d51e043aac",
+    "scripts/cache_video.py": "cf1f42d81dd1b892787e7193e46f2c2f303470d18d55890e10cc734591268bd1",
+    "evaluation/coco_metrics.py": "8bae5288674a34dd159cc85299e6e23e7e7287492dacf4060e44b560be7d7edb",
+    "evaluation/__init__.py": "f212f9d2ca83cb2ccb01545e7347204132dd553a41dc1a9e25aa79d51e043aac",
+    "tools/prepare_detection.py": "edfaaff21b220cf0a8c2abc2343f217c31dfb69a144271dbd7c098d026c5b6c6",
+    "tools/__init__.py": "f212f9d2ca83cb2ccb01545e7347204132dd553a41dc1a9e25aa79d51e043aac",
+    "tools/experiment_flow.py": "4fbdc94c2e6655bddb76c3079bc8d8ed6d57203fbfe3cfbaa8517181c14481b6",
+    "tools/check_environment.py": "7d89b09c03331bcb3e68076e8b52238f0241f6fec7b548f64e3eabe7023254dd",
+    "tools/validate_export.py": "4d875c4a1e7e5532e1411de6cf81466409db708f2cc554110f97932e4c038af0",
+    "tools/runtime.py": "ea7a408f851acfdcb4679cbe48ed3ad55418c25da4be81d5ac4a0601c1a34022",
+    "tools/probe_batch.py": "94e9a6f68045bda432ff9ea76d1cd4b745a96b09d3f9d484d77a04ce16013c14",
+    "tools/download_weights.py": "dfcc54dd580abdb98f6b2eeb2a7ba7084301ea15520722b1571ae7454378e98b",
+    "tools/summarize_results.py": "df55916c0a548483db50d1a4e4858097fc0857a9210cc28a874c59e892345f9b",
+    "tools/tune_batches.py": "24ad3ed8b1ceab9d10fb35442156694d3f0833ce39e13ade5f0040f4be3f237b",
+    "train.py": "e632c25ec04b8705226ce9a05ee1c4ede7535099e09c21b9571b0806b62d5110"
+  },
+  "method": "yolox_s",
+  "config": {
+    "method": "yolox_s",
+    "pretrained": "models/pretrained/yolox_s.pth",
+    "epochs": 100,
+    "imgsz": 640,
+    "batch": 16,
+    "effective_batch": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.0005,
+    "seed": 42,
+    "workers": 4
+  },
+  "arguments": {
+    "config": "/home/DP/pigdet_20261021/project/configs/yolox_s.yaml",
+    "dataset": "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+    "name": "yolox_s_seed42_20261021_164039_171581",
+    "epochs": null,
+    "imgsz": null,
+    "device": "cuda:0",
+    "max_steps": 0,
+    "limit": 0
+  },
+  "dataset": "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+  "split_sha256": "39846e286dd66b75911e479c94cac8f6e56b3802aad0fe80ea81f9c495319e53",
+  "protocol": "exploratory",
+  "protocol_note": "EXPLORATORY same-scene filename blocks with exclusion gaps; filenames are NOT verified time/source groups; semantic leakage and video overlap remain unproven.",
+  "smoke_only": false,
+  "pretrained": "/home/DP/pigdet_20261021/project/models/pretrained/yolox_s.pth",
+  "pretrained_sha256": "f55ded7181e1b0c13285c56e7790b8f0e8f8db590fe4edb37f0b7f345c913a30",
+  "output": "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581",
+  "class_names": [
+    "pig"
+  ],
+  "deterministic": "seeded; architecture-specific CUDA operations may be nondeterministic",
+  "fairness": "shared splits/epochs/nominal size; native architectural preprocessing retained; NOT original paper recipes",
+  "smoke_budget_note": null,
+  "initialization": {
+    "loaded_tensors": 456,
+    "skipped_keys": [
+      "head.cls_preds.0.weight",
+      "head.cls_preds.0.bias",
+      "head.cls_preds.1.weight",
+      "head.cls_preds.1.bias",
+      "head.cls_preds.2.weight",
+      "head.cls_preds.2.bias"
+    ],
+    "newly_initialized_keys": [
+      "head.cls_preds.0.weight",
+      "head.cls_preds.0.bias",
+      "head.cls_preds.1.weight",
+      "head.cls_preds.1.bias",
+      "head.cls_preds.2.weight",
+      "head.cls_preds.2.bias"
+    ],
+    "unexpected": []
+  },
+  "actual_effective_batch": 32,
+  "selection": "validation COCO AP50:95; no test-set checkpoint selection",
+  "checkpoint": "/home/DP/pigdet_20261021/project/experiments/runs/yolox_s_seed42_20261021_164039_171581/best.pt",
+  "checkpoint_sha256": "8374ad092804672d3c5d6e8a1bfc887af5f33953e1ba355e7adef1b0c4216b0e"
+}

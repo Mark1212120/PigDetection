@@ -1,0 +1,10 @@
+method: fcos_r50_fpn
+pretrained: models/pretrained/fcos_resnet50_fpn_coco-99b0c9b7.pth
+epochs: 40
+imgsz: 640
+batch: 4
+effective_batch: 4
+lr: 0.0001
+weight_decay: 0.0005
+seed: 42
+validation_batch: 1

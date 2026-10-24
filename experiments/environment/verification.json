@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "environment": "pigdet",
+  "python_executable": "D:\\Python_Resources\\Envs\\pigdet\\python.exe",
+  "python_version": "3.11.17",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "gpu": "NVIDIA GeForce RTX 2050",
+  "gpu_memory_bytes": 4294508544,
+  "torch_cuda_runtime": "12.1",
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "numpy": "1.26.4",
+    "opencv-python": "4.11.0.86",
+    "ultralytics": "8.4.183",
+    "yolox": "0.3.0",
+    "pycocotools": "2.0.11",
+    "onnx": "1.23.2",
+    "onnxsim": "0.4.36"
+  },
+  "checks": [
+    {
+      "method": "fasterrcnn_r50_fpn",
+      "check": "random-weight CUDA forward",
+      "passed": true
+    },
+    {
+      "method": "retinanet_r50_fpn",
+      "check": "random-weight CUDA forward",
+      "passed": true
+    },
+    {
+      "method": "fcos_r50_fpn",
+      "check": "random-weight CUDA forward",
+      "passed": true
+    },
+    {
+      "method": "yolox_s",
+      "check": "random-weight CUDA forward",
+      "passed": true
+    },
+    {
+      "method": "yolov8s",
+      "check": "random-weight CUDA forward",
+      "passed": true
+    },
+    {
+      "method": "rtdetr-l",
+      "check": "random-weight CUDA forward",
+      "passed": true
+    }
+  ],
+  "coco_oracle_ap": 0.9999999999999998,
+  "pip_check": "No broken requirements found.",
+  "scope": "Environment smoke checks only; random weights, small synthetic input; no dataset training or accuracy evaluation."
+}

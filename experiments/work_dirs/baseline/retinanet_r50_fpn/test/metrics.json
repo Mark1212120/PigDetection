@@ -1,0 +1,52 @@
+{
+  "method": "retinanet_r50_fpn",
+  "split": "test",
+  "metrics": {
+    "AP": 0.6799177024366415,
+    "AP50": 0.9803458897602833,
+    "AP75": 0.846995082134234,
+    "AP_small": -1.0,
+    "AP_medium": 0.1570609692548202,
+    "AP_large": 0.6818053653539882,
+    "AR1": 0.07726920093095424,
+    "AR10": 0.7417377812257564,
+    "AR100": 0.7467804499612102,
+    "AR_small": -1.0,
+    "AR_medium": 0.2,
+    "AR_large": 0.7484824902723736,
+    "units": "fractions 0..1; -1 means undefined; COCO maxDets=100"
+  },
+  "timing": {
+    "measured_images": 132,
+    "excluded_warmup": 1,
+    "mean_ms": 12.342118594626134,
+    "scope": "batch=1 adapter preprocessing+model+postprocessing; excludes disk decode; not standardized paper FPS"
+  },
+  "smoke_only": false,
+  "protocol": "exploratory",
+  "protocol_note": "EXPLORATORY same-scene filename blocks with exclusion gaps; filenames are NOT verified time/source groups; semantic leakage and video overlap remain unproven.",
+  "environment": {
+    "python": "/home/DP/pigdet_20261021/env/bin/python",
+    "utc": "2026-10-21T11:49:19.810417+00:00",
+    "versions": {
+      "torch": "2.5.1+cu121",
+      "torchvision": "0.20.1+cu121",
+      "ultralytics": "8.4.183",
+      "numpy": "1.26.4"
+    },
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "weights": "/home/DP/pigdet_20261021/project/experiments/runs/retinanet_r50_fpn_seed42_20261021_164039_171581/best.pt",
+  "weights_sha256": "f14388636b24aaa3e8fb9c423c37337e31f9ab626ed9d3cbddf4122f11aa2471",
+  "split_sha256": "39846e286dd66b75911e479c94cac8f6e56b3802aad0fe80ea81f9c495319e53",
+  "arguments": {
+    "method": "retinanet_r50_fpn",
+    "weights": "/home/DP/pigdet_20261021/project/experiments/runs/retinanet_r50_fpn_seed42_20261021_164039_171581/best.pt",
+    "dataset": "/home/DP/pigdet_20261021/project/data/processed/exploratory",
+    "split": "test",
+    "output": "/home/DP/pigdet_20261021/project/experiments/results/retinanet_r50_fpn_seed42_20261021_164039_171581_test",
+    "device": "cuda:0",
+    "imgsz": 640,
+    "limit": 0
+  }
+}

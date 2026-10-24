@@ -1,0 +1,24 @@
+{
+  "metrics": {
+    "AP": 0.684770442228715,
+    "AP50": 0.9839965645132269,
+    "AP75": 0.88122899815222,
+    "AP_small": -1.0,
+    "AP_medium": 0.14858184539533095,
+    "AP_large": 0.6900821614495293,
+    "AR1": 0.08088235294117647,
+    "AR10": 0.7470588235294118,
+    "AR100": 0.7527573529411765,
+    "AR_small": -1.0,
+    "AR_medium": 0.3571428571428571,
+    "AR_large": 0.7579143389199255,
+    "units": "fractions 0..1; -1 means undefined; COCO maxDets=100"
+  },
+  "smoke_only": false,
+  "timing": {
+    "measured_images": 111,
+    "excluded_warmup": 1,
+    "mean_ms": 13.05229958935498,
+    "scope": "batch=1 adapter preprocessing+model+postprocessing; excludes disk decode; not standardized paper FPS"
+  }
+}

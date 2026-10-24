@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-21T05:07:58.386159+00:00",
+  "image_root": "D:\\Projects\\Pig_Detection_test\\data\\raw\\pig_detection\\data",
+  "image_count": 1015,
+  "unique_image_count": 1015,
+  "duplicate_group_count": 0,
+  "duplicate_extra_copy_count": 0,
+  "duplicate_groups": [],
+  "paired_xml_count": 1015,
+  "scope": "Current detection images after unlabeled-image removal",
+  "files_deleted_this_check": 0
+}

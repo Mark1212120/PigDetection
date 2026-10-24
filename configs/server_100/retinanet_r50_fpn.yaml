@@ -1,0 +1,10 @@
+method: retinanet_r50_fpn
+pretrained: models/pretrained/retinanet_resnet50_fpn_coco-eeacb38b.pth
+epochs: 100
+imgsz: 640
+batch: 32
+effective_batch: 32
+lr: 0.0001
+weight_decay: 0.0005
+seed: 42
+workers: 4
