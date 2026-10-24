@@ -124,7 +124,7 @@ Pig_Detection_test/
 ├── configs/                  # 默认本机40轮配置及server_100历史预算
 ├── data/                     # 原图、XML、清洗审计、固定划分和COCO/YOLO派生数据
 ├── datasets/                 # COCO读取与模型原生预处理接口
-├── docs/                     # 实验手册、运行说明、目录说明、Word实验报告
+├── docs/                     # 实验手册、运行说明和目录说明；Word仅在本机保留
 ├── evaluation/               # 统一COCO评测及自动图表报告代码
 ├── experiments/
 │   ├── work_dirs/
@@ -160,7 +160,7 @@ python -m pip install --no-build-isolation --no-deps -e tools/third_party/YOLOX
 
 原始服务器JSON/CSV保留历史Linux路径及原字节。本机当前位置以 `experiments/final_results.json` 为准。服务器与本机划分清单仅 `raw_root` 路径字段不同，图片/XML哈希及划分一致；评测入口仅接受经验证的这一映射，不放宽任意划分哈希检查。
 
-实验手册：[01_猪只目标检测实验手册.md](docs/01_猪只目标检测实验手册.md) · [代码运行说明](docs/代码运行说明.md) · [Word实验报告](docs/猪只目标检测实验对比报告.docx)
+实验手册：[01_猪只目标检测实验手册.md](docs/01_猪只目标检测实验手册.md) · [代码运行说明](docs/代码运行说明.md)。Word实验报告仅在本机交付，不随仓库发布。
 
 模型权重下载来源与SHA256记录在本机 `models/pretrained/weights_manifest.json`；最佳权重位置及SHA256见结果索引。公开仓库只含代码、配置、元数据和统计图表。
 

@@ -3,6 +3,10 @@ __pycache__/
 *.pt
 *.pth
 *.onnx
+*.doc
+*.docx
+*.docm
+*.dotx
 data/raw/
 data/processed/
 data/cache/
